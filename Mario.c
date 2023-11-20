@@ -7,18 +7,18 @@ int main()
 
     do
     {
-        //ask user how many heights want make
+        // 询问用户想要多高的金字塔
         printf("type a num 1-8: ");
         scanf("%d", &n);
 
-        //check check bro is stupid asshole or not
+        // 检查用户的输入是否合理
         if (n < 1 || n > 8)
         {
             while (getchar() != '\n');
         }
     } while (n < 1 || n > 8);
         
-    //make left piramid
+    // 生成左侧金字塔
     for (x = 1; x <= n; x++)
     {
         for (y = n - x; y > 0; y--)
@@ -29,9 +29,10 @@ int main()
             printf("%c", p);
         }
      
-        //make a space and right piramid
+        // 在金字塔中间弄个空格
         printf(" ");
 
+	// 生成右侧金字塔
         for (z = 1; z <= x; z++)
         {
             printf("%c", p);
