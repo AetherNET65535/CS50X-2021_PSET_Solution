@@ -6,11 +6,11 @@ int main() {
     int coins = 0;
        
     do {
-        //JI DUO?
+        // 请求用户输入零钱
         printf("Enter the change (0.??): ");
         scanf("%f", &change);
 
-        //HUH?
+        // 检查零钱是否合法
         if (change <= 0 || change >= 1.0) {
             printf("Invalid. Enter value between 0 and 1.\n");
             while (getchar() != '\n'); 
@@ -18,7 +18,7 @@ int main() {
 
     } while (change <= 0 || change >= 1.0);
     
-    //SUAN QIAN...
+    // 找零...
     while (change > 0.000001) {
         if (change >= 0.25) {
             change -= 0.25;
@@ -41,7 +41,7 @@ int main() {
         }
     }
 
-    //GEI QIAN!!
+    // 输出硬币数量
     printf("Number of coins: %d\n", coins);
 
     return 0;
