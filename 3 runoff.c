@@ -12,8 +12,7 @@ typedef struct
 {
     char* name;
     int points;
-}
-noSmallAnymore;
+}noSmallAnymore;
 
 // 函数声明
 void getUserInput(noSmallAnymore* bigPeople, int user);
@@ -79,7 +78,8 @@ void printRankResult(noSmallAnymore* bigPeople)
     // 打印结果
     qsort(bigPeople, 3, sizeof(noSmallAnymore), cmp);
 
-    for (int i = 2; i >= 0; i--) {
+    for (int i = 2; i >= 0; i--) 
+{
         printf("Rank %d: %s - %dpt\n", 3-i, bigPeople[i].name, bigPeople[i].points);
     }
 }
